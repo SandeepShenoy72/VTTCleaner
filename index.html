@@ -93,7 +93,7 @@
 
         downloadButton.addEventListener("click", () => {
             const cleanedText = cleanedContent.value;
-            const fileName = fileInput.files[0]?.name || "cleaned_content.txt";
+            const fileName = fileInput.files[0]?.name || "cleaned_content.docx";
             const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.');
             const fileExtension = fileName.split('.').pop();
             const cleanedFileName = `${fileNameWithoutExtension}_Cleaned.txt`;
