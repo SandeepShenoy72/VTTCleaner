@@ -97,6 +97,16 @@
             const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.');
             const fileExtension = fileName.split('.').pop();
             const cleanedFileName = `${fileNameWithoutExtension}_Cleaned.docx`;
+            const content = `<!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset='utf-8'>
+                        <title>Document</title>
+                    </head>
+                    <body>
+                        <p>${cleanedText.replace(/\n/g, '<br>')}</p>
+                    </body>
+                    </html>`;
             const blob = new Blob([content], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
             const link = document.createElement("a");
             link.href = URL.createObjectURL(blob);
