@@ -97,7 +97,7 @@
             const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.');
             const fileExtension = fileName.split('.').pop();
             const cleanedFileName = `${fileNameWithoutExtension}_Cleaned.txt`;
-            const blob = new Blob([cleanedText], { type: "text/plain;charset=utf-8" });
+            const blob = new Blob([content], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
             const link = document.createElement("a");
             link.href = URL.createObjectURL(blob);
             link.download = cleanedFileName;  
